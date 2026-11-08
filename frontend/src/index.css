@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Devanagari", "Noto Sans Tamil", ui-sans-serif, system-ui, sans-serif;
+  --color-ink-950: #070b14;
+  --color-ink-900: #0b1220;
+  --color-ink-800: #131c2e;
+  --color-ink-700: #1d2840;
+  --color-ink-600: #2c3a57;
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe0e3;
+  --color-brand-500: #e11d2e;
+  --color-brand-600: #c8102e;
+  --color-brand-700: #a10d25;
+  --color-viz-1: #2a78d6;
+  --color-viz-2: #eb6834;
+  --color-viz-3: #1baf7a;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-slate-50 text-slate-900 antialiased; }
+:lang(hi) body, :lang(hi) { line-height: 1.6; }
+:lang(ta) body, :lang(ta) { line-height: 1.6; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.animate-rise { animation: rise .35s ease-out both; }
+@keyframes typing { 0%, 80%, 100% { opacity: .2 } 40% { opacity: 1 } }
+.dot { animation: typing 1.2s infinite; }
+.dot:nth-child(2) { animation-delay: .15s } .dot:nth-child(3) { animation-delay: .3s }
+@media (prefers-reduced-motion: reduce) { .animate-rise, .dot { animation: none; } }
